@@ -29,8 +29,6 @@ class Agents extends REST_Controller {
 
     }
 
-
-
     public function retrieve_agents_get()
     {
         $this->load->model('Agents_Model');
@@ -40,5 +38,21 @@ class Agents extends REST_Controller {
         $agents = $this->Agents_Model->retrieve_agents($param);
         log_message('error', 'incoming ' . $param) ;
         $this->response($agents, REST_Controller::HTTP_OK); 
+    }
+
+    public function login_post()
+    {
+        $this->load->model('Agents_Model');
+
+        $phone = $this->post('phone');
+        $password = $this->post('password');
+        
+        if ($phone == '08563122366' & $password == 'abcde'){
+            $this->response(array("response"=>'OK'), REST_Controller::HTTP_OK); 
+        }
+        else{
+            $this->response(array("response"=>'Bad Request'), REST_Controller::HTTP_BAD_REQUEST); 
+        }
+
     }
 }

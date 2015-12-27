@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">ProjectBeta</string>
+    <string name="action_incoming">Order Masuk</string>
+    <string name="action_ongoing">In Progress</string>
+    <string name="action_done">Order Selesai</string>
+</resources>

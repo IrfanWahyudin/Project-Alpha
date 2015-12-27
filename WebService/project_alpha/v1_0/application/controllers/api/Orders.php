@@ -52,14 +52,47 @@ class Orders extends REST_Controller {
                     'lat' => $lat,
                     'lng' => $lng
                     ];
-        log_message('error', 'incoming ' . $lat . $lng . $name) ;
+        log_message('error', 'incoming ' . $lat . ' ' . $lng . ' ' . $name . ' idagent '. $idagent ) ;
         if (is_null($name) | $name == ''){
             $this->set_response(" Gagal menyimpan", REST_Controller::HTTP_BAD_REQUEST);
         }
         else{
-            $this->Orders_Model->create_orders($phone, $name, $address, $lat, $lng);
+            $this->Orders_Model->create_orders($phone, $name, $address, $lat, $lng, $idagent);
             $this->set_response(" Sukses menyimpan", REST_Controller::HTTP_CREATED);
         }            
+    }
+
+    public function retrieve_orders_by_customer_get()
+    {
+        $this->load->model('Orders_Model');
+
+        $phone = $this->get('phone');
+        $status = $this->get('status');
+
+        $orders = $this->Orders_Model->retrieve_orders_by_customer($phone, $status);
+        $this->response($orders, REST_Controller::HTTP_OK); 
+    }
+
+    public function retrieve_orders_by_agent_get()
+    {
+        $this->load->model('Orders_Model');
+
+        $idagent = $this->get('phone');
+        $status = $this->get('status');
+
+        $orders = $this->Orders_Model->retrieve_orders_by_agent($idagent, $status);
+        $this->response($orders, REST_Controller::HTTP_OK); 
+    }
+
+    public function update_order_status_get()
+    {
+        $this->load->model('Orders_Model');
+
+        $phone = $this->get('phone');
+        $idagent = $this->get('idagent');
+        $status = $this->get('status');
+
+
     }
 
     

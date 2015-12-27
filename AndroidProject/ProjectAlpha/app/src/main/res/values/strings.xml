@@ -1,11 +1,19 @@
 <resources>
+
+    <string name="action_search">Menu</string>
+    <string name="action_new_order">Order Baru</string>
+    <string name="action_old_order">Order Sebelumnya</string>
+
     <string name="app_name">ProjectAlpha</string>
     <string name="customer_name">Nama</string>
     <string name="customer_phone">Telepon</string>
     <string name="customer_email">e-Mail</string>
     <string name="customer_address">Alamat</string>
 
-<!-- TODO: Remove or change this placeholder text -->
+    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="title_activity_maps">Map</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="action_ongoing">Ongoing Order</string>
+    <string name="action_done">Done Order</string>
 </resources>

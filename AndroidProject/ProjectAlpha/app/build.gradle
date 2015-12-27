@@ -3,8 +3,9 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
+
     defaultConfig {
-        applicationId "com.delta.irfan.projectalpha"
+        applicationId "com.delta.irfan.toolbar"
         minSdkVersion 9
         targetSdkVersion 23
         versionCode 1
@@ -21,8 +22,6 @@ android {
         exclude 'META-INF/NOTICE'
         exclude 'META-INF/LICENSE'
     }
-    productFlavors {
-    }
 }
 
 dependencies {
@@ -30,5 +29,4 @@ dependencies {
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:appcompat-v7:23.1.0'
     compile 'com.google.android.gms:play-services:8.1.0'
-    compile 'com.android.support:support-v4:23.1.0'
 }

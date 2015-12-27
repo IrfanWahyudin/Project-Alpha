@@ -1,59 +1,62 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp"
-    android:orientation="vertical"
-    xmlns:map="http://schemas.android.com/apk/res-auto"
-    map:mapType="normal"
-    tools:context=".Map">
+    tools:context=".MainActivity">
 
-    <EditText
-        android:layout_width="match_parent"
+    <LinearLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/customer_name"
-        android:id="@+id/customer_name"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/customer_phone"
-        android:inputType="text"
-        android:id="@+id/customer_phone"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/customer_email"
-        android:inputType="text"
-        android:id="@+id/customer_email"/>
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="@string/customer_address"
-        android:inputType="text"
-        android:id="@+id/customer_address"/>
+        android:layout_alignParentTop="true"
+        android:orientation="vertical">
 
-
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Simpan"
-        android:onClick="createCustomers"/>
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Order"
-        android:onClick="createOrders"/>
-    <Button
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:text="Pick Up Location"
-        android:onClick="showLocation"/>
+        <include
+            android:id="@+id/toolbar"
+            layout="@layout/toolbar" />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_name"
+            android:id="@+id/customer_name"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_phone"
+            android:inputType="text"
+            android:id="@+id/customer_phone"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_email"
+            android:inputType="text"
+            android:id="@+id/customer_email"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/customer_address"
+            android:inputType="text"
+            android:id="@+id/customer_address"/>
 
 
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Simpan"
+            android:onClick="createCustomers"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Order"
+            android:onClick="createOrders"/>
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:text="Pick Up Location"
+            android:onClick="showLocation"/>
+    </LinearLayout>
 
-</LinearLayout>
+
+</RelativeLayout>
